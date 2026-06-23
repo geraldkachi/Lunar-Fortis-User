@@ -107,7 +107,7 @@ export default function SearchBar({
         />
       </div>
 
-      {/* Search button */}
+      {/* Search button */} 
       <button
         onClick={handleSearch}
         className="bg-[#0D1B2A] hover:bg-[#1a2d40] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm whitespace-nowrap"
