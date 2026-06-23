@@ -70,7 +70,7 @@ export default function MyBookingsPage() {
             const count = countFor(t.id);
             return (
               <button key={t.id} onClick={() => setFilter(t.id)}
-                className={cn("px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap",
+                className={cn("px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors whitespace-nowrap cursor-pointer",
                   filter === t.id ? "border-[#0D1B2A] text-[#0D1B2A]" : "border-transparent text-[#6B7280] hover:text-[#0D1B2A]")}>
                 {t.label}
                 {count > 0 && (
