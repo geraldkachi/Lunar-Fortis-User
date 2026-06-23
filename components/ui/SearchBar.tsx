@@ -35,7 +35,7 @@ export default function SearchBar({
   };
 
   return (
-    <div className={`flex items-center gap-2 ${compact ? "" : ""}`}>
+    <div className={`flex items-center flex-wrap gap-2 ${compact ? "" : ""}`}>
       {/* Category select */}
       <div className="relative">
         <select
