@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'); */
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #0D1B2A;
+  background: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { 
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8D8E8;
+  border-radius: 3px;
+}
+
+/* Input styles */
+.lf-input {
+  @apply w-full bg-[#EEF3F8] border border-[#C8D8E8] rounded-xl px-4 py-3 text-[#0D1B2A] placeholder-[#9CA3AF] outline-none transition-all duration-200;
+}
+.lf-input:focus {
+  @apply border-[#0D1B2A] bg-white ring-2 ring-[#0D1B2A]/10;
+}
+
+/* OTP input */
+.otp-box {
+  @apply w-16 h-16 bg-[#EEF3F8] border-2 border-[#C8D8E8] rounded-xl text-center text-xl font-semibold text-[#0D1B2A] outline-none transition-all duration-200;
+}
+.otp-box:focus {
+  @apply border-[#0D1B2A] bg-white;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply w-full bg-[#0D1B2A] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#1a2d40] transition-all duration-200 text-base;
+}
+.btn-outline {
+  @apply border border-[#0D1B2A] text-[#0D1B2A] font-semibold py-3 px-5 rounded-xl hover:bg-[#0D1B2A] hover:text-white transition-all duration-200 text-sm;
+}
+
+/* Card styles */
+.listing-card {
+  @apply bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-200 cursor-pointer;
+}
+
+/* Tracking progress */
+.progress-step-done {
+  @apply w-8 h-8 rounded-full bg-[#0D1B2A] flex items-center justify-center flex-shrink-0;
+}
+.progress-step-pending {
+  @apply w-8 h-8 rounded-full bg-[#E5E7EB] flex items-center justify-center flex-shrink-0;
+}
