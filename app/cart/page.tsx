@@ -136,10 +136,10 @@ export default function CartPage() {
                     className="flex items-center justify-center gap-2 w-full bg-[#0D1B2A] hover:bg-[#1a2d40] text-white font-semibold py-3.5 rounded-xl transition-colors text-sm mb-2 disabled:opacity-60">
                     {placingId === item.id
                       ? <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Submitting...</>
-                      : <>Request Booking <ArrowRight size={15} /></>}
+                      : <>{item?.title.slice(0, 7)} Request Booking <ArrowRight size={15} /></>}
                   </button>
                 ))}
-                <p className="text-xs text-center text-[#6B7280] mt-1">You won't be charged until the vendor approves</p>
+                <p className="text-xs text-center text-[#6B7280] mt-1">You won&apos;t be charged until the vendor approves</p>
               </div>
             </div>
           </div>
