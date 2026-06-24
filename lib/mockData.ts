@@ -485,5 +485,5 @@ export const COMPLETED_BOOKING: BookingInfo = {
 };
 
 export function formatPrice(amount: number): string {
-  return `₦${amount.toLocaleString("en-NG")}`;
+  return `₦${amount?.toLocaleString("en-NG")}`;
 }
