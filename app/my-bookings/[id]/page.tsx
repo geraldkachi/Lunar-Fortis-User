@@ -232,6 +232,10 @@ export default function BookingDetailPage({ params }: { params: Promise<{ id: st
 
   const booking = bookings.find((b) => b.id === id);
 
+  // ✅ MOVED: Call useCountdown BEFORE the early return
+  const countdown = useCountdown(booking?.countdown ?? 0);
+  const countdownDisplay = booking?.countdown ? countdown : null;
+
   if (!isLoggedIn || !booking) {
     return (
       <>
@@ -246,7 +250,7 @@ export default function BookingDetailPage({ params }: { params: Promise<{ id: st
     );
   }
 
-  const countdown = useCountdown(booking.countdown ?? 0);
+  // const countdown = useCountdown(booking.countdown ?? 0);
   const cfg = STATUS_CONFIG[booking.status];
   const isCar = booking.type === "car";
   const isTerminal = ["completed", "cancelled", "declined"].includes(booking.status);
@@ -356,6 +360,9 @@ export default function BookingDetailPage({ params }: { params: Promise<{ id: st
             {/* Countdown + action buttons — only when not terminal */}
             {!isTerminal && (
               <div className="flex items-center justify-between">
+                <span className="text-xl font-bold text-[#E8392A] font-mono">
+                  {countdownDisplay || "00:00:00"}
+                </span>
                 <span className="text-xl font-bold text-[#E8392A] font-mono">{countdown}</span>
                 <div className="flex gap-2">
                   {(isPending || isApproved) && (
