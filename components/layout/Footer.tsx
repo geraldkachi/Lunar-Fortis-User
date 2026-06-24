@@ -91,9 +91,9 @@ export default function Footer() {
             <h4 className="text-xs font-semibold text-white/50 uppercase tracking-wider mb-4">Legal</h4>
             <ul className="space-y-3">
               {[
-    { label: "terms-of-service", path: "/terms-of-use" },
-    { label: "Privacy Policy", path: "/privacy-policy" }
-  ].map((item) => (
+                { label: "terms-of-service", path: "/terms-of-use" },
+                { label: "Privacy Policy", path: "/privacy-policy" }
+              ].map((item) => (
                 <li key={item.label}>
                   <Link href={item.path} className="text-sm text-white/70 hover:text-white transition-colors">
                     {item.label}
