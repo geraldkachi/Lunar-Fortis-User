@@ -54,7 +54,7 @@ function LoginForm() {
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#6B7280]"><Lock size={16} /></span>
                 <input type={showPassword ? "text" : "password"} value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••••" className="lf-input pl-10 pr-10" />
+                  placeholder="••••••••••" className="lf-input pl-20 pr-20" />
                 <button type="button" onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-[#6B7280] hover:text-[#0D1B2A]">
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
