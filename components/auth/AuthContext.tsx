@@ -95,7 +95,7 @@ const AuthContext = createContext<AuthContextType | null>(null);
 const DEMO_USER: User = {
   id: "user-1",
   email: "user@example.com",
-  name: "Adewale Afolabi",
+  name: "Adimora Augustine",
   initials: "AA",
 };
 
